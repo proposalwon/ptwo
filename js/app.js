@@ -68,6 +68,8 @@ export async function route(viewId) {
         if (viewId === 'capture') {
             const { initCapture } = await import('./modules/capture.js');
             initCapture();
+            const { initPipeline } = await import('./modules/pipeline.js');
+            initPipeline();
         } else if (viewId === 'proposal') {
              // Future module for Proposal Automation
         }
